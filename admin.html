@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Admin/title>
+<script src="slideshow.js"></script>	
+
+<style>
+.mySlides {display:none;}
+</style>
+	
+<link rel="stylesheet" href="game.css"
+</head>
+
+<header>
+    <h1>UWL Games</h1>
+</header>
+	
+<ul>                                           
+  <li><a href="index.html">Featured</a></li>
+  <li><a href="games.html">PC Games</a></li>
+  <li><a href="playstation.html">Playstation</a></li>
+  <li><a href="xbox.html">Xbox</a></li>
+</ul>
+	
+
+<div class="div_container">
+
+
+<main>
+    <h1>Product List</h1>
+
+    <aside>
+        <!-- display a list of categories -->
+        <h2>Categories</h2>
+        <nav>
+        <ul>
+            <?php foreach ($categories as $category) : ?>
+            <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+                    <?php echo $category['categoryName']; ?>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        </nav>          
+    </aside>
+
+    <section>
+        <!-- display a table of products -->
+        <h2><?php echo $category_name; ?></h2>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th class="right">Price</th>
+                <th>&nbsp;</th>
+            </tr>
+
+            <?php foreach ($products as $product) : ?>
+            <tr>
+                <td><?php echo $product['productCode']; ?></td>
+                <td><?php echo $product['productName']; ?></td>
+                <td class="right"><?php echo $product['listPrice']; ?></td>
+                <td>
+
+		</td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <p><a href="add_product_form.php">Add Product</a></p>
+        
+    </section>
+</main>
+
+
+</div>
+
+<footer>
+  <p>© Copyright 2018</p>
+</footer>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000); 
+}
+</script>
+
+
+<body>
+</body>
+</html>

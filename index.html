@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Game page</title>
+<script src="slideshow.js"></script>	
+
+<style>
+.mySlides {display:none;}
+</style>
+	
+<link rel="stylesheet" href="game.css"
+</head>
+<header>
+    <h1>UWL Games</h1>
+	
+	<li><a href="authn/login.html">Login</a></li>
+	<li><a href="authn/newuser.html">Register</a></li>
+</header>
+	
+<ul>                                           
+  <li><a href="index.html">Featured</a></li>
+  <li><a href="games.html">PC Games</a></li>
+  <li><a href="playstation.html">Playstation</a></li>
+  <li><a href="xbox.html">Xbox</a></li>
+</ul>
+	
+
+
+<div class="div_container">
+<div class="slidshow" style="max-width:1200px">
+  <img class="mySlides" src="images/rdr2.jpg" style="width:100%">
+  <img class="mySlides" src="images/hitman2.jpg" style="width:100%">
+  <img class="mySlides" src="images/fallout76.jpg" style="width:100%">
+</div>
+
+<h1> Deals </h1>
+
+<a href="checkout2.html">
+<div class="div_box1">
+<img src="images/acosale.jpg" alt="Assassins Creed Odyssey">
+<div class="ac">Assassins Creed Odyssey</div>
+<div class="old_price">£̶4̶9̶.̶9̶9̶</div>
+<div class="new_price">£42.49</div>
+<div class="buy">Buy</div>
+</a>
+	
+</div>
+
+<a href="checkout2.html">
+<div class="div_box2">
+<img src="images/blackops4.jpg" alt="Black ops 4">
+<div class="ac">Call of Duty Black Ops 4</div>
+<div class="old_price">£̶4̶9̶.̶9̶9̶</div>
+<div class="new_price">£42.49</div>
+<div class="buy">Buy</div>	
+</div>
+</a>
+	
+<a href="checkout2.html">
+<div class="div_box3">
+<img src="images/mhw.jpg" alt="Monster hunter world">
+<div class="ac">Monster hunter world</div>
+<div class="old_price">£̶4̶9̶.̶9̶9̶</div>
+<div class="new_price">£42.49</div>
+<div class="buy">Buy</div>
+</div>
+</a>
+</div>
+
+
+	
+<footer>
+  <p>© Copyright 2018</p>
+</footer>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000); 
+}
+</script>
+
+
+<body>
+</body>
+</html>
