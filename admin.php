@@ -51,11 +51,11 @@ $statement3->closeCursor();
 .mySlides {display:none;}
 </style>
 	
-<link rel="stylesheet" href="game.css"
+<link rel="stylesheet" href="style.css"
 </head>
 
 <header>
-    <h1>UWL Games</h1>
+    <h1><img src=images/logo.png></h1>
 
 
 	
@@ -145,23 +145,23 @@ $statement3->closeCursor();
 </header>
 	
 <ul>                                           
-  <li><a href="index.php">Featured</a></li>
-  <li><a href="games.html">PC Games</a></li>
-  <li><a href="playstation.html">Playstation</a></li>
-  <li><a href="xbox.html">Xbox</a></li>
+  <li><a href="index.php">Home</a></li>
+  <li><a href="men.php">Men</a></li>
+  <li><a href="women.php">Women</a></li>
+  <li><a href="contact.html">Contact</a></li>
     <li><a href="admin.php">Admin</a></li>
+    <li><a onclick="on()">Cart</a></li>
 </ul>
-	
 
 <div class="div_container">
 
 
 <header><h1>Product Manager</h1></header>
 <main>
-    <h1>Product List</h1>
+     <!-- <h1>Product List</h1>
 
     <aside>
-        <!-- display a list of categories -->
+    
         <h2>Categories</h2>
         <nav>
         <ul>
@@ -173,10 +173,10 @@ $statement3->closeCursor();
             <?php endforeach; ?>
         </ul>
         </nav>          
-    </aside>
+    </aside> -->
 
     <section>
- <h2><?php echo $category_name; ?></h2>
+ <h2>Products</h2>
  <table>
  <tr>
  <th>Code</th>
@@ -209,7 +209,17 @@ $statement3->closeCursor();
 </div>
 
 <footer>
-  <p>© Copyright 2018</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<div class="customer"> CUSTOMER SERVICE </div>
+<div class="legal"> LEGAL INFORMATION </div>
+<div class="about"> ABOUT </div>
+<div class="help"> HELP </div>
+
 </footer>
 
 
